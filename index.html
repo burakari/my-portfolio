@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burak Arı | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --gold: #FFD700;
+            --dark-space: #0b0e14;
+            --card-gray: #161b22;
+            --text-white: #f0f6fc;
+            --text-dim: #8b949e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark-space);
+            color: var(--text-white);
+            line-height: 1.6;
+        }
+
+        /* Top Accent (Bee-Style) */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: repeating-linear-gradient(90deg, var(--gold), var(--gold) 25px, #000 25px, #000 50px);
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        /* Hero */
+        header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        h1 {
+            font-size: 3.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #fff 0%, var(--gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: var(--gold);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* Sections */
+        section {
+            background: var(--card-gray);
+            padding: 40px;
+            border-radius: 24px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 215, 0, 0.05);
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        section:hover {
+            transform: scale(1.02);
+            border-color: var(--gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        h2 i {
+            color: var(--gold);
+            font-size: 1.8rem;
+        }
+
+        p {
+            color: var(--text-dim);
+            font-size: 1.1rem;
+        }
+
+        /* Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .item {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 25px;
+            border-radius: 16px;
+            border-bottom: 3px solid transparent;
+            transition: 0.3s;
+        }
+
+        .item:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-bottom-color: var(--gold);
+        }
+
+        .item i {
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .item h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        /* Buttons */
+        .social-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: #000;
+            background: var(--gold);
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+            filter: brightness(1.1);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+        }
+
+        .btn-outline:hover {
+            background: var(--gold);
+            color: #000;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; }
+            section { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Burak Arı</h1>
+            <div class="tagline">Law • Data Science • Engineering</div>
+        </header>
+
+        <section>
+            <h2><i class="fas fa-user-astronaut"></i> About Me</h2>
+            <p>
+                I am a unique blend of <strong>Mechanical Engineering</strong> (MSc Aerospace) and <strong>Law</strong> (LLB). 
+                I bridge the gap between heavy technical systems and legal frameworks by using 
+                <strong>Data Science</strong> as my primary tool for analysis and innovation.
+            </p>
+        </section>
+
+        <section>
+            <h2><i class="fas fa-microchip"></i> Expertise</h2>
+            <div class="grid">
+                <div class="item">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Aerospace</h3>
+                    <p>Advanced flight dynamics, control systems, and structural mechanics for aerospace applications.</p>
+                </div>
+                <div class="item">
+                    <i class="fas fa-gavel"></i>
+                    <h3>Legal Tech</h3>
+                    <p>Integrating technical precision with legal compliance and regulatory data analysis.</p>
+                </div>
+                <div class="item">
+                    <i class="fas fa-brain"></i>
+                    <h3>Data Science</h3>
+                    <p>Uncovering insights from complex datasets to solve cross-disciplinary problems.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2><i class="fas fa-paper-plane"></i> Get In Touch</h2>
+            <p style="margin-bottom: 25px;">Ready to collaborate or have a question? Reach out through any of the channels below.</p>
+            <div class="social-row">
+                <a href="mailto:burak.ari2025@gmail.com" class="btn">
+                    <i class="fas fa-envelope"></i> Email Me
+                </a>
+                <a href="https://github.com/BeeBurky" target="_blank" class="btn btn-outline">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="#" class="btn btn-outline">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
